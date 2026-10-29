@@ -1,0 +1,52 @@
+{
+  "id": 8,
+  "name": "The Gauntlet",
+  "hint": "Three plates, three doors, one keycard — and barely enough time. Every run counts.",
+  "maxRuns": 4,
+  "tickLimit": 400,
+  "grid": [
+    "################",
+    "#Pp.......d.#..#",
+    "#.........#.L.E#",
+    "#.........######",
+    "#.........#....#",
+    "#.p.......d..D.#",
+    "#.........#....#",
+    "#.........######",
+    "#.p.......d....#",
+    "#.........#..K.#",
+    "#.........#....#",
+    "################"
+  ],
+  "links": [
+    { "plate": [2, 1], "door": [10, 1] },
+    { "plate": [2, 5], "door": [10, 5] },
+    { "plate": [2, 8], "door": [10, 8] }
+  ],
+  "guards": [],
+  "solution": [
+    {
+      "description": "Keeper one: hold the plate by the spawn.",
+      "path": [[2, 1]],
+      "holdTicks": 30,
+      "end": "run"
+    },
+    {
+      "description": "Keeper two: hold the middle plate.",
+      "path": [[2, 5]],
+      "holdTicks": 30,
+      "end": "run"
+    },
+    {
+      "description": "Keeper three: hold the lower plate.",
+      "path": [[2, 8]],
+      "holdTicks": 30,
+      "end": "run"
+    },
+    {
+      "description": "Grab the keycard, the diamond, and clear the inner lock before the clock runs out.",
+      "path": [[9, 1], [9, 8], [10, 8], [13, 8], [13, 9], [13, 8], [10, 8], [9, 8], [9, 5], [10, 5], [13, 5], [10, 5], [9, 5], [9, 1], [10, 1], [11, 1], [11, 2], [12, 2], [14, 2]],
+      "end": "win"
+    }
+  ]
+}

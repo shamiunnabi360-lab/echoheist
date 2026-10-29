@@ -1,0 +1,48 @@
+{
+  "id": 11,
+  "name": "Silent Partner",
+  "hint": "One echo holds the plate. Another stands where the guard stares — then slip beneath its nose.",
+  "maxRuns": 3,
+  "tickLimit": 300,
+  "grid": [
+    "################",
+    "#P.............#",
+    "#..p...........#",
+    "#..............#",
+    "#..............#",
+    "#..............#",
+    "########.#######",
+    "#..............#",
+    "#..............#",
+    "#............D.#",
+    "#.............E#",
+    "################"
+  ],
+  "links": [],
+  "guards": [
+    { "path": [[2, 5], [13, 5]], "speed": 10 }
+  ],
+  "lasers": [
+    {
+      "tiles": [[10, 7], [10, 8], [10, 9], [10, 10]],
+      "plate": [3, 2]
+    }
+  ],
+  "solution": [
+    {
+      "description": "Park an echo on the plate to keep the lower beam off.",
+      "path": [[3, 2]],
+      "end": "run"
+    },
+    {
+      "description": "Slip into the patrol hall while the guard looks the other way, and freeze there as bait.",
+      "path": [[8, 1], [8, 4], [8, 5]],
+      "end": "run"
+    },
+    {
+      "description": "Wait until the guard stands on your echo, then walk right beneath it, cross the dead beam, and reach the exit.",
+      "path": [[8, 1], [8, 4, 96], [8, 5], [8, 6], [8, 7], [10, 7], [13, 7], [13, 9], [13, 10], [14, 10]],
+      "end": "win"
+    }
+  ]
+}

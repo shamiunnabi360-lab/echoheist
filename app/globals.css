@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #0f1020;
+  color: #e6e2d3;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* Crisp nearest-neighbour upscaling for the low-res game board. */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Subtle CRT scanlines. pointer-events: none so they never eat clicks. */
+.scanlines {
+  position: relative;
+}
+
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(15, 16, 32, 0) 0px,
+    rgba(15, 16, 32, 0) 2px,
+    rgba(15, 16, 32, 0.18) 3px,
+    rgba(15, 16, 32, 0.18) 4px
+  );
+  mix-blend-mode: multiply;
+}

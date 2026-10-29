@@ -1,0 +1,38 @@
+{
+  "id": 3,
+  "name": "Keycard Caper",
+  "hint": "Every run starts with an empty pocket. Grab your own keycard before the locked door.",
+  "maxRuns": 3,
+  "tickLimit": 1600,
+  "grid": [
+    "################",
+    "#P.............#",
+    "#..............#",
+    "#....K....p....#",
+    "#..............#",
+    "######L#########",
+    "#.............E#",
+    "#........#######",
+    "#........#.....#",
+    "#........d..D..#",
+    "#........#.....#",
+    "################"
+  ],
+  "links": [
+    { "plate": [10, 3], "door": [9, 9] }
+  ],
+  "guards": [],
+  "solution": [
+    {
+      "description": "Bank a ghost on the upper plate.",
+      "path": [[5, 1], [5, 3], [10, 3]],
+      "holdTicks": 40,
+      "end": "run"
+    },
+    {
+      "description": "Take your own keycard, pass the locked door, and open the vault from the held plate.",
+      "path": [[5, 1], [5, 3], [6, 3], [6, 9], [9, 9], [12, 9], [9, 9], [8, 9], [8, 6], [14, 6]],
+      "end": "win"
+    }
+  ]
+}

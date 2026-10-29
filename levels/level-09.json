@@ -1,0 +1,39 @@
+{
+  "id": 9,
+  "name": "The Watch",
+  "hint": "A guard paces the hall outside the vault door. Follow it once it turns away.",
+  "maxRuns": 2,
+  "tickLimit": 220,
+  "grid": [
+    "################",
+    "#P.....#.......#",
+    "#.p....#.......#",
+    "#......#.......#",
+    "#......#.......#",
+    "#......d...D...#",
+    "#......#.......#",
+    "#......#.......#",
+    "#......#.......#",
+    "#......#.......#",
+    "#......#......E#",
+    "################"
+  ],
+  "links": [
+    { "plate": [2, 2], "door": [7, 5] }
+  ],
+  "guards": [
+    { "path": [[2, 5], [6, 5]], "speed": 10 }
+  ],
+  "solution": [
+    {
+      "description": "Park an echo on the plate so the vault door stays open.",
+      "path": [[2, 2]],
+      "end": "run"
+    },
+    {
+      "description": "Wait above the hall, drop in behind the guard, and cross while it walks away.",
+      "path": [[6, 1], [6, 4], [6, 5], [7, 5], [8, 5], [11, 5], [11, 10], [14, 10]],
+      "end": "win"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": 2,
+  "name": "Side Vault",
+  "hint": "The diamond room has a single door, and its plate is far away. Give the plate to a past run.",
+  "maxRuns": 3,
+  "tickLimit": 1500,
+  "grid": [
+    "################",
+    "#P.............#",
+    "#....####......#",
+    "#....#.D#..p...#",
+    "#....#..#......#",
+    "#....#..d......#",
+    "#....#..#......#",
+    "#....####......#",
+    "#..............#",
+    "#.....E........#",
+    "#..............#",
+    "################"
+  ],
+  "links": [
+    { "plate": [11, 3], "door": [8, 5] }
+  ],
+  "guards": [],
+  "solution": [
+    {
+      "description": "Hold the far plate for the whole heist.",
+      "path": [[11, 1], [11, 3]],
+      "holdTicks": 40,
+      "end": "run"
+    },
+    {
+      "description": "Enter the vault through the held door, grab the diamond, and leave south.",
+      "path": [[9, 1], [9, 5], [8, 5], [7, 5], [7, 3], [7, 5], [8, 5], [9, 5], [9, 8], [6, 8], [6, 9]],
+      "end": "win"
+    }
+  ]
+}

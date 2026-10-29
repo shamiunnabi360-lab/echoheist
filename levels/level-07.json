@@ -1,0 +1,52 @@
+{
+  "id": 7,
+  "name": "Three Locks",
+  "hint": "Three doors, three keepers. The vault's inner lock still wants your own keycard.",
+  "maxRuns": 4,
+  "tickLimit": 2200,
+  "grid": [
+    "################",
+    "#P........d..K.#",
+    "#.p.......#....#",
+    "#.........######",
+    "#.........#.#..#",
+    "#.p.......d.LD.#",
+    "#.........#.#..#",
+    "#.........######",
+    "#.p.......d....#",
+    "#.........#....#",
+    "#.........#...E#",
+    "################"
+  ],
+  "links": [
+    { "plate": [2, 2], "door": [10, 1] },
+    { "plate": [2, 5], "door": [10, 5] },
+    { "plate": [2, 8], "door": [10, 8] }
+  ],
+  "guards": [],
+  "solution": [
+    {
+      "description": "Keeper one: hold the plate for the keycard door.",
+      "path": [[2, 2]],
+      "holdTicks": 40,
+      "end": "run"
+    },
+    {
+      "description": "Keeper two: hold the plate for the vault door.",
+      "path": [[2, 5]],
+      "holdTicks": 40,
+      "end": "run"
+    },
+    {
+      "description": "Keeper three: hold the plate for the exit door.",
+      "path": [[2, 8]],
+      "holdTicks": 40,
+      "end": "run"
+    },
+    {
+      "description": "Grab the keycard, crack the inner lock, then leave through the lower door.",
+      "path": [[9, 1], [10, 1], [13, 1], [10, 1], [9, 1], [9, 5], [10, 5], [11, 5], [12, 5], [13, 5], [12, 5], [11, 5], [10, 5], [9, 5], [9, 8], [10, 8], [14, 8], [14, 10]],
+      "end": "win"
+    }
+  ]
+}

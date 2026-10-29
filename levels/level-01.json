@@ -1,0 +1,38 @@
+{
+  "id": 1,
+  "name": "First Echo",
+  "hint": "The door only opens while its plate is pressed. You can't be in two places — yet.",
+  "maxRuns": 3,
+  "tickLimit": 1200,
+  "grid": [
+    "################",
+    "#P.....p.#.....#",
+    "#........#.....#",
+    "#........d..D..#",
+    "#........#.....#",
+    "#........#.....#",
+    "#........#######",
+    "#..............#",
+    "#..............#",
+    "#..............#",
+    "#.............E#",
+    "################"
+  ],
+  "links": [
+    { "plate": [7, 1], "door": [9, 3] }
+  ],
+  "guards": [],
+  "solution": [
+    {
+      "description": "Stand on the plate and end the run there.",
+      "path": [[7, 1]],
+      "holdTicks": 40,
+      "end": "run"
+    },
+    {
+      "description": "Walk under the held door, take the diamond, and reach the exit.",
+      "path": [[8, 1], [8, 3], [9, 3], [12, 3], [9, 3], [8, 3], [8, 10], [14, 10]],
+      "end": "win"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": 10,
+  "name": "Laser Grid",
+  "hint": "The plate powers down the first beam. The second burns on a rhythm — wait out the red phase.",
+  "maxRuns": 2,
+  "tickLimit": 240,
+  "grid": [
+    "################",
+    "#P.............#",
+    "#..p...........#",
+    "#..............#",
+    "#..............#",
+    "#..............#",
+    "#..............#",
+    "#..............#",
+    "#..............#",
+    "#............D.#",
+    "#.............E#",
+    "################"
+  ],
+  "links": [],
+  "guards": [],
+  "lasers": [
+    {
+      "tiles": [[5, 1], [5, 2], [5, 3], [5, 4], [5, 5], [5, 6], [5, 7], [5, 8], [5, 9], [5, 10]],
+      "plate": [3, 2]
+    },
+    {
+      "tiles": [[10, 1], [10, 2], [10, 3], [10, 4], [10, 5], [10, 6], [10, 7], [10, 8], [10, 9], [10, 10]],
+      "cycle": { "onTicks": 40, "offTicks": 40, "phase": 30 }
+    }
+  ],
+  "solution": [
+    {
+      "description": "Park an echo on the plate to keep the first beam off.",
+      "path": [[3, 2]],
+      "end": "run"
+    },
+    {
+      "description": "Cross the dead beam, wait at the edge of the live one, then dash through its off phase.",
+      "path": [[9, 1, 40], [10, 1], [13, 1], [13, 9], [14, 9], [14, 10]],
+      "end": "win"
+    }
+  ]
+}

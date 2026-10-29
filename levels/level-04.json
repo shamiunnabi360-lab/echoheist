@@ -1,0 +1,38 @@
+{
+  "id": 4,
+  "name": "Twin Gate",
+  "hint": "One plate opens a door far away — the inner lock still needs a keycard in your own pocket.",
+  "maxRuns": 3,
+  "tickLimit": 1500,
+  "grid": [
+    "################",
+    "#P....#...#....#",
+    "#.K...#...#....#",
+    "#.....#...#....#",
+    "#..p..d...L.DE.#",
+    "#.....#...#....#",
+    "#.....#...#....#",
+    "#.....#...#....#",
+    "#.....#...#....#",
+    "#.....#...#....#",
+    "#.....#...#....#",
+    "################"
+  ],
+  "links": [
+    { "plate": [3, 4], "door": [6, 4] }
+  ],
+  "guards": [],
+  "solution": [
+    {
+      "description": "Bank a ghost on the plate in the west corridor.",
+      "path": [[3, 4]],
+      "holdTicks": 40,
+      "end": "run"
+    },
+    {
+      "description": "Collect your keycard, cross both gates, and step out with the diamond.",
+      "path": [[2, 1], [2, 2], [2, 4], [6, 4], [8, 4], [11, 4], [12, 4], [13, 4]],
+      "end": "win"
+    }
+  ]
+}

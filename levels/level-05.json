@@ -1,0 +1,45 @@
+{
+  "id": 5,
+  "name": "Two Keepers",
+  "hint": "Two doors, two keepers. Bank a ghost on each plate, then walk both doors in one run.",
+  "maxRuns": 3,
+  "tickLimit": 1500,
+  "grid": [
+    "################",
+    "#P........######",
+    "#.........######",
+    "#.........######",
+    "#.........#....#",
+    "#.p.......d..D.#",
+    "#.........#....#",
+    "#.........######",
+    "#.p.......d....#",
+    "#.........#....#",
+    "#.........#...E#",
+    "################"
+  ],
+  "links": [
+    { "plate": [2, 5], "door": [10, 5] },
+    { "plate": [2, 8], "door": [10, 8] }
+  ],
+  "guards": [],
+  "solution": [
+    {
+      "description": "Keeper one: hold the upper plate.",
+      "path": [[2, 5]],
+      "holdTicks": 40,
+      "end": "run"
+    },
+    {
+      "description": "Keeper two: hold the lower plate.",
+      "path": [[2, 8]],
+      "holdTicks": 40,
+      "end": "run"
+    },
+    {
+      "description": "Walk both held doors, take the diamond, and reach the exit.",
+      "path": [[9, 1], [9, 5], [10, 5], [13, 5], [10, 5], [9, 5], [9, 8], [10, 8], [14, 8], [14, 10]],
+      "end": "win"
+    }
+  ]
+}
